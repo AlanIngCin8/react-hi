@@ -15,9 +15,13 @@ jobs:
       - name: Build it
         working-directory: ./my-app
         run: |
-          git config --global user.email "root@githubaction.com"
-          git config --global user.name "Via Github actions"
           npm i
           npm ci
           npm run build
-          npm run deploy # this just pushes it to gh-pages branch, Settings > Pages handles it from there... 
+          #npm run deploy # this just pushes it to gh-pages branch, Settings > Pages handles it from there... 
+      - name: Publish it
+        working-directory: ./my-app
+        run: |  
+            git config --global user.email "AlanIngCin8@users.noreply.github.com"
+            git config --global user.name "AlanIngCin8"
+            npm run deploy
