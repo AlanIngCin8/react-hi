@@ -18,7 +18,7 @@ jobs:
           secrets_PAT: ${{ secrets.PAT }}
         run: |
           git config --global credential.https://github.com.username git
-          git config --global credential.https://github.com.password ${{ secrets_PAT }}
+          git config --global credential.https://github.com.password $secrets_PAT
           npm i
           npm ci
           npm run build
