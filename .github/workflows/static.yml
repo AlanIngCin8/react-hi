@@ -10,14 +10,11 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    
     steps:
-    - uses: actions/checkout@v3
-    - run : npm i
-      shell: bash
-    - run : npm ci
-      shell: bash
-    - run : cd my-app
-      shell: bash
-    - run : npm run build
-      shell: bash
+      - uses: actions/checkout@v1
+      - name: Build it
+        working-directory: ./app
+        run: |
+          npm i
+          npm ci
+          npm run build
