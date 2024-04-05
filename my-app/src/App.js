@@ -1,5 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
+// import Table
+import Table from './table';
+import ReverseStringComponent from './button-reverse';
+import ExpandableComponent from './ExpandableComponent';
 
 function App() {
   return (
@@ -17,6 +21,12 @@ function App() {
         >
           Learn React
         </a>
+      
+        <Table></Table>
+      
+        <ReverseStringComponent></ReverseStringComponent>
+        
+        <ExpandableComponent></ExpandableComponent>
       </header>
     </div>
   );
