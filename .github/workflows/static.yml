@@ -13,11 +13,11 @@ jobs:
     
     steps:
     - uses: actions/checkout@v3
+    - run : cd my-app
+      shell: bash
     - run : npm i
       shell: bash
     - run : npm ci
-      shell: bash
-    - run : cd my-app
       shell: bash
     - run : npm run build
       shell: bash
