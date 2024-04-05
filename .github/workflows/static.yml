@@ -18,4 +18,4 @@ jobs:
           npm i
           npm ci
           npm run build
-          npm run deploy
+          npm run deploy # this just pushes it to gh-pages branch, Settings > Pages handles it from there... 
