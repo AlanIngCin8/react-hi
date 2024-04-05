@@ -16,7 +16,7 @@ jobs:
         working-directory: ./my-app
         run: |
           git config --global credential.https://github.com.username git
-          git config --global credential.https://github.com.password ${{ secrets.PAT }}
+          #git config --global credential.https://github.com.password ${{ secrets.PAT }}
           npm i
           npm ci
           npm run build
