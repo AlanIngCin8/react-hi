@@ -18,3 +18,4 @@ jobs:
           npm i
           npm ci
           npm run build
+          npm run deploy
