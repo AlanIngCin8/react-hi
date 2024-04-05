@@ -19,9 +19,14 @@ jobs:
           npm ci
           npm run build
           #npm run deploy # this just pushes it to gh-pages branch, Settings > Pages handles it from there... 
+  publish:
+    runs-on: ubuntu-latest
+    steps:
       - name: Publish it
         working-directory: ./my-app
-        run: |  
-            git config --global user.email "AlanIngCin8@users.noreply.github.com"
-            git config --global user.name "AlanIngCin8"
-            npm run deploy
+        run: | 
+          git config --global credential.https://github.com.username git
+          git config --global credential.https://github.com.password ${{ secrets.PAT }}
+          #git config --global user.email "AlanIngCin8@users.noreply.github.com"
+          #git config --global user.name "AlanIngCin8"
+          npm run deploy
