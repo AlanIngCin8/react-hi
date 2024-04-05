@@ -15,6 +15,8 @@ jobs:
       - name: Build it
         working-directory: ./my-app
         run: |
+          git config --global user.email "root@githubaction.com"
+          git config --global user.name "Via Github actions"
           npm i
           npm ci
           npm run build
